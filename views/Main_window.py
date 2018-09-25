@@ -124,13 +124,3 @@ class EMainWindow(object):
         self.open_output_data.setText(_translate("MainWindow", "Просмотр выходные данных", None))
         self.exit.setText(_translate("MainWindow", "Выход", None))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-

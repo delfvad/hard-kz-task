@@ -32,17 +32,17 @@ if __name__ == "__main__":
     goverment_start_conditions_2 = GovermentStartConditions2()
     goverment_start_conditions_2.setupUi(QtGui.QDialog())
 
-    # output_data = OutputData()
-    # output_data.setupUi(QtGui.QDialog())
+    output_data = OutputData()
+    output_data.setupUi(QtGui.QDialog())
 
-    # population_input_data = PopulationInputData()
-    # population_input_data.setupUi(QtGui.QDialog)
+    population_input_data = PopulationInputData()
+    population_input_data.setupUi(QtGui.QDialog())
 
-    # population_start_conditions = PopulationStartConditions()
-    # population_start_conditions.setupUi(QtGui.QDialog)
+    population_start_conditions = PopulationStartConditions()
+    population_start_conditions.setupUi(QtGui.QDialog())
 
-    # production_input_data = ProductionInputData()
-    # production_input_data.setupUi(QtGui.QDialog)
+    production_input_data = ProductionInputData()
+    production_input_data.setupUi(QtGui.QDialog())
 
     main_window.open_bank_coeffitients.triggered.connect(
         bank_input_data.window.show)
@@ -52,9 +52,9 @@ if __name__ == "__main__":
         goverment_start_conditions_1.window.show)
     main_window.open_goverment_initial_conditions2.triggered.connect(
         goverment_start_conditions_2.window.show)
-    # main_window.open_output_data.triggered.connect(output_data.window.show)
-    # main_window.open_population_coefficients.connect(population_input_data.window.show)
-    # main_window.open_population_initial_conditions.connect(population_start_conditions.window.show)
-    # main_window.open_production_setup.triggered.connect(production_input_data.window.show)
+    main_window.open_output_data.triggered.connect(output_data.window.show)
+    main_window.open_population_coefficients.triggered.connect(population_input_data.window.show)
+    main_window.open_population_initial_conditions.triggered.connect(population_start_conditions.window.show)
+    main_window.open_production_setup.triggered.connect(production_input_data.window.show)
 
     sys.exit(app.exec_())

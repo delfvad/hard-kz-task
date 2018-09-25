@@ -218,14 +218,3 @@ class ProductionInputData(object):
         self.saveButton.setText(_translate("Dialog", "Запись", None))
         self.cancelButton.setText(_translate("Dialog", "Отмена", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
-

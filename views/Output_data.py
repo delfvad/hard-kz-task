@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Output data.ui'
+# Form implementation generated from reading ui file 'Output_data.ui'
 #
 # Created by: PyQt4 UI code generator 4.12.1
 #
@@ -26,9 +26,9 @@ class OutputData(object):
     def setupUi(self, Dialog):
         self.window = Dialog
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(800, 600)
-        self.verticalLayout_4 = QtGui.QVBoxLayout(Dialog)
-        self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
+        Dialog.resize(575, 413)
+        self.verticalLayout_5 = QtGui.QVBoxLayout(Dialog)
+        self.verticalLayout_5.setObjectName(_fromUtf8("verticalLayout_5"))
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.verticalLayout_2 = QtGui.QVBoxLayout()
@@ -49,16 +49,16 @@ class OutputData(object):
         self.credit_rate_list.setObjectName(_fromUtf8("credit_rate_list"))
         self.verticalLayout_3.addWidget(self.credit_rate_list)
         self.horizontalLayout.addLayout(self.verticalLayout_3)
-        self.verticalLayout = QtGui.QVBoxLayout()
-        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.verticalLayout_4 = QtGui.QVBoxLayout()
+        self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
         self.label = QtGui.QLabel(Dialog)
         self.label.setObjectName(_fromUtf8("label"))
-        self.verticalLayout.addWidget(self.label)
+        self.verticalLayout_4.addWidget(self.label)
         self.unemploy_level_list = QtGui.QListWidget(Dialog)
         self.unemploy_level_list.setObjectName(_fromUtf8("unemploy_level_list"))
-        self.verticalLayout.addWidget(self.unemploy_level_list)
-        self.horizontalLayout.addLayout(self.verticalLayout)
-        self.verticalLayout_4.addLayout(self.horizontalLayout)
+        self.verticalLayout_4.addWidget(self.unemploy_level_list)
+        self.horizontalLayout.addLayout(self.verticalLayout_4)
+        self.verticalLayout_5.addLayout(self.horizontalLayout)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -66,7 +66,7 @@ class OutputData(object):
         self.exitButton = QtGui.QPushButton(Dialog)
         self.exitButton.setObjectName(_fromUtf8("exitButton"))
         self.horizontalLayout_2.addWidget(self.exitButton)
-        self.verticalLayout_4.addLayout(self.horizontalLayout_2)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
