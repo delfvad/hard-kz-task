@@ -8,7 +8,10 @@ from views.Output_data import OutputData
 from views.Population_Input_data import PopulationInputData
 from views.Population_start_conditions import PopulationStartConditions
 from views.Production_input_data import ProductionInputData
+import pandas
+from IPython import embed
 
+df = pandas.read_csv('intens.csv')
 
 
 
@@ -37,6 +40,7 @@ if __name__ == "__main__":
 
     population_input_data = PopulationInputData()
     population_input_data.setupUi(QtGui.QDialog())
+    population_input_data.handleTable(df)
 
     population_start_conditions = PopulationStartConditions()
     population_start_conditions.setupUi(QtGui.QDialog())
