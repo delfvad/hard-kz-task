@@ -8,7 +8,6 @@
 
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtGui import QTableWidgetItem
-from IPython import embed
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -29,7 +28,6 @@ class PopulationInputData(object):
     def handleTable(self, df):
       self.tableWidget.setRowCount(70)
       for index, row in df.iterrows():
-          print index
           self.tableWidget.setItem(index, 0, QTableWidgetItem(str(row['age'])))
           self.tableWidget.setItem(index, 1, QTableWidgetItem(str(row['count'])))
           self.tableWidget.setItem(index, 2, QTableWidgetItem(str(row['birth'])))
