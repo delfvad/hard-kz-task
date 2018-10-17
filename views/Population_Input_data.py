@@ -168,6 +168,16 @@ class PopulationInputData(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+        
+        self.lineEdit.setText('18')
+        self.lineEdit_2.setText('60')
+        self.lineEdit_3.setText('0.03')
+        self.lineEdit_4.setText('0.08')
+        self.lineEdit_5.setText('0.90')
+        self.lineEdit_6.setText('0.15')
+        self.lineEdit_7.setText('0.13')
+        self.lineEdit_8.setText('0.12')
+
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))

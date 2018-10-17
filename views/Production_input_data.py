@@ -195,6 +195,23 @@ class ProductionInputData(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.lineEdit.setText('0.10')
+        self.lineEdit_2.setText('0.20')
+        self.lineEdit_3.setText('0.10')
+        self.lineEdit_4.setText('0.20')
+        self.lineEdit_5.setText('0.30')
+        self.lineEdit_6.setText('0.20')
+        self.lineEdit_7.setText('0.33')
+        self.lineEdit_8.setText('0.15')
+        self.lineEdit_9.setText('827000000')
+        self.lineEdit_10.setText('3000000')
+        self.lineEdit_11.setText('15')
+        self.lineEdit_12.setText('0.32')
+        self.lineEdit_13.setText('0')
+        self.lineEdit_14.setText('92500000')
+        self.lineEdit_16.setText('0.90')
+        self.lineEdit_17.setText('3.00')
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
         self.label.setText(_translate("Dialog", "Производство", None))

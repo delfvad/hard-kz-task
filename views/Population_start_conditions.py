@@ -107,6 +107,14 @@ class PopulationStartConditions(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.lineEdit.setText('2000000')
+        self.lineEdit_2.setText('1500000')
+        self.lineEdit_3.setText('15')
+        self.lineEdit_4.setText('1.60')
+        self.lineEdit_5.setText('1.900')
+        self.lineEdit_6.setText('18200000')
+        self.lineEdit_7.setText('19')
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
         self.label_8.setText(_translate("Dialog", "Население ( начальные условия )", None))

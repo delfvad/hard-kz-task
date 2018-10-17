@@ -150,6 +150,16 @@ class BankInputData(object):
         self.horizontalLayout_2.addWidget(self.exitButton)
         self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
 
+        self.lineEdit.setText('0.01')
+        self.lineEdit_2.setText('0.20')
+        self.lineEdit_3.setText('0.10')
+        self.lineEdit_4.setText('0.02')
+        self.lineEdit_9.setText('40000')
+        self.lineEdit_10.setText('1206100000')
+        self.lineEdit_11.setText('3375400')
+        self.lineEdit_12.setText('260')
+        self.lineEdit_13.setText('1.00')
+
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 

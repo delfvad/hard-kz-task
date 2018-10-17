@@ -129,6 +129,15 @@ class GovermentStartConditions2(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.lineEdit.setText('1000000')
+        self.lineEdit_2.setText('44350125')
+        self.lineEdit_3.setText('207400')
+        self.lineEdit_4.setText('29451122')
+        self.lineEdit_5.setText('0')
+        self.lineEdit_9.setText('0')
+        self.lineEdit_10.setText('63050000')
+        self.lineEdit_11.setText('30485000')
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
         self.label.setText(_translate("Dialog", "Государство ( начальные условия )", None))

@@ -137,6 +137,16 @@ class GovermentInputData(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+        
+        self.lineEdit.setText('0.00')
+        self.lineEdit_2.setText('0.40')
+        self.lineEdit_3.setText('1.00')
+        self.lineEdit_4.setText('0.17')
+        self.lineEdit_5.setText('0.01')
+        self.lineEdit_9.setText('0.15')
+        self.lineEdit_10.setText('0.40')
+        self.lineEdit_11.setText('0.20')
+        self.lineEdit_12.setText('0.11')
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
