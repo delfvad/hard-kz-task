@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
+from PyQt4.QtGui import QTableWidgetItem
+import pandas
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -58,8 +60,32 @@ class OutputData(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        nac = [17338.2, 17586.1, 17731.3, 17591.5, 17918.3, 18165.7, 18221.8, 18374.4]
+        vvp_nominal_tenge = [34.231, 39.521, 40.886, 44.354, 49.740, 51.836, 52.731, 54.442]
+        vvp_temp = [6, 4.3, 1.2, 1, 4, 3.6, 3.8, 4.1]
+        bezrab = [5.2, 4.9, 4.9, 5.0, 4.9, 4.8, 4.8, 4.8]
+        inf = [5.82, 6.61, 7.54, 13.63, 7.29, 5.62, 4.98, 4.76]
+        arr = []
+        for j in range(0,8):
+          arr.append([])
+          arr[j].append(nac[j])
+          arr[j].append(vvp_nominal_tenge[j])
+          arr[j].append(vvp_temp[j])
+          arr[j].append(bezrab[j])
+          arr[j].append(inf[j])
+
+        # stavka = [5.5, 8.3, 13.1, 10.3, 8.7, 8.8, 7.5, 7.25]
+        odf = pandas.DataFrame(arr, columns=['nac', 'vvp_nominal_tenge', 'vvp_temp', 'bezrab', 'inf'])
+        self.tableWidget.setRowCount(10)
+        for index, row in odf.iterrows():
+            self.tableWidget.setItem(index, 0, QTableWidgetItem(str(row['nac'])))
+            self.tableWidget.setItem(index, 1, QTableWidgetItem(str(row['vvp_nominal_tenge'])))
+            self.tableWidget.setItem(index, 2, QTableWidgetItem(str(row['vvp_temp'])))
+            self.tableWidget.setItem(index, 3, QTableWidgetItem(str(row['bezrab'])))
+            self.tableWidget.setItem(index, 4, QTableWidgetItem(str(row['inf'])))
+
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Выходные данные", None))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Численность населения", None))
         item = self.tableWidget.horizontalHeaderItem(1)

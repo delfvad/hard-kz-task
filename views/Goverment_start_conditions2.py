@@ -139,7 +139,7 @@ class GovermentStartConditions2(object):
         self.lineEdit_11.setText('30485000')
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Государство начальные условия и коэффициенты 2", None))
         self.label.setText(_translate("Dialog", "Государство ( начальные условия )", None))
         self.label_2.setText(_translate("Dialog", "расходы бюджета на обслуживание\n"
 "внешнего гос долга", None))

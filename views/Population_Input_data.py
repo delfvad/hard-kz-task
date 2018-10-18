@@ -180,7 +180,7 @@ class PopulationInputData(object):
 
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Население начальные условия", None))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Возраст", None))
         item = self.tableWidget.horizontalHeaderItem(1)

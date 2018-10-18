@@ -213,7 +213,7 @@ class ProductionInputData(object):
         self.lineEdit_17.setText('3.00')
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Производство начальные условия и коэффициенты", None))
         self.label.setText(_translate("Dialog", "Производство", None))
         self.label_18.setText(_translate("Dialog", "коэффициенты", None))
         self.label_2.setText(_translate("Dialog", "к-т износа основных фондов", None))

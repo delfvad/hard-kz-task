@@ -164,7 +164,7 @@ class BankInputData(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Банк начальные условия и коэффициенты", None))
         self.label.setText(_translate("Dialog", "Банк", None))
         self.label_18.setText(_translate("Dialog", "коэффициенты", None))
         self.label_2.setText(_translate("Dialog", "норма налога на доход банковской системы", None))

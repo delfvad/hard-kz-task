@@ -149,7 +149,7 @@ class GovermentInputData(object):
         self.lineEdit_12.setText('0.11')
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Государство начальные условия", None))
         self.label.setText(_translate("Dialog", "Государство\n"
 "Коэффициенты", None))
         self.label_2.setText(_translate("Dialog", "норма спец. налога", None))

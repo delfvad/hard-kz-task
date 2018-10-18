@@ -116,7 +116,7 @@ class PopulationStartConditions(object):
         self.lineEdit_7.setText('19')
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Население начальные условия", None))
         self.label_8.setText(_translate("Dialog", "Население ( начальные условия )", None))
         self.label.setText(_translate("Dialog", "Численность работающих в бюджетных организациях", None))
         self.label_2.setText(_translate("Dialog", "Численность работающих в банковской сфере", None))
