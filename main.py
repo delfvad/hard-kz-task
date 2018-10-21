@@ -1,3 +1,4 @@
+
 from PyQt4 import QtCore, QtGui
 from views.Main_window import EMainWindow
 from views.Bank_input_data import BankInputData
@@ -8,11 +9,14 @@ from views.Output_data import OutputData
 from views.Population_Input_data import PopulationInputData
 from views.Population_start_conditions import PopulationStartConditions
 from views.Production_input_data import ProductionInputData
+from views.Login import Login
 import pandas
 from IPython import embed
 
-df = pandas.read_csv('intens.csv')
+def setFieldsState(state):
+  pass
 
+df = pandas.read_csv('intens.csv')
 
 
 if __name__ == "__main__":
@@ -42,11 +46,15 @@ if __name__ == "__main__":
     population_input_data.setupUi(QtGui.QDialog())
     population_input_data.handleTable(df)
 
+    global population_start_conditions
     population_start_conditions = PopulationStartConditions()
     population_start_conditions.setupUi(QtGui.QDialog())
 
     production_input_data = ProductionInputData()
     production_input_data.setupUi(QtGui.QDialog())
+
+    login_window = Login(setFieldsState)
+    login_window.setupUi(QtGui.QDialog())
 
     main_window.open_bank_coeffitients.triggered.connect(
         bank_input_data.window.show)
@@ -60,5 +68,7 @@ if __name__ == "__main__":
     main_window.open_population_coefficients.triggered.connect(population_input_data.window.show)
     main_window.open_population_initial_conditions.triggered.connect(population_start_conditions.window.show)
     main_window.open_production_setup.triggered.connect(production_input_data.window.show)
+    main_window.login.triggered.connect(login_window.window.show)
 
     sys.exit(app.exec_())
+

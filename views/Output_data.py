@@ -54,6 +54,9 @@ class OutputData(object):
         self.horizontalLayout_2.addItem(spacerItem)
         self.exitButton = QtGui.QPushButton(Dialog)
         self.exitButton.setObjectName(_fromUtf8("exitButton"))
+        self.calculateButton = QtGui.QPushButton(Dialog)
+        self.calculateButton.setObjectName(_fromUtf8("calculateButton"))
+        self.horizontalLayout_2.addWidget(self.calculateButton)
         self.horizontalLayout_2.addWidget(self.exitButton)
         self.verticalLayout_5.addLayout(self.horizontalLayout_2)
 
@@ -97,3 +100,4 @@ class OutputData(object):
         item = self.tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("Dialog", "Уровень безработицы", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
+        self.calculateButton.setText(_translate("Dialog", "Расчет", None))
