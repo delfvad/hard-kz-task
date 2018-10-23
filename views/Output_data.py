@@ -10,6 +10,7 @@ from PyQt4 import QtCore, QtGui
 from PyQt4.QtGui import QTableWidgetItem
 import pandas
 from numpy.random import normal, uniform, choice
+import matplotlib.pyplot as plt
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -27,12 +28,14 @@ except AttributeError:
 
 class OutputData(object):
 
+    START_YEAR = 2010
     def __init__(self):
         self.nac = [17338.2, 17586.1, 17731.3, 17591.5, 17918.3, 18165.7, 18221.8, 18374.4]
         self.vvp_nominal_tenge = [34.231, 39.521, 40.886, 44.354, 49.740, 51.836, 52.731, 54.442]
         self.vvp_temp = [6.0, 4.3, 1.2, 1, 4, 3.6, 3.8, 4.1]
         self.bezrab = [5.2, 4.9, 4.9, 5.0, 4.9, 4.8, 4.8, 4.8]
         self.inf = [5.82, 6.61, 7.54, 13.63, 7.29, 5.62, 4.98, 4.76]
+        self.data = [self.nac, self.vvp_nominal_tenge, self.vvp_temp, self.bezrab, self.inf]
 
     def setupUi(self, Dialog):
         self.window = Dialog
@@ -65,6 +68,9 @@ class OutputData(object):
         self.exitButton.setObjectName(_fromUtf8("exitButton"))
         self.calculateButton = QtGui.QPushButton(Dialog)
         self.calculateButton.setObjectName(_fromUtf8("calculateButton"))
+        self.plotButton = QtGui.QPushButton(Dialog)
+        self.plotButton.setObjectName(_fromUtf8("plotButton"))
+        self.horizontalLayout_2.addWidget(self.plotButton)
         self.horizontalLayout_2.addWidget(self.calculateButton)
         self.horizontalLayout_2.addWidget(self.exitButton)
         self.verticalLayout_5.addLayout(self.horizontalLayout_2)
@@ -72,6 +78,7 @@ class OutputData(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.plotButton.clicked.connect(self.handlePlotButtonPress)
         self.calculateButton.clicked.connect(self.handleCalculateButtonPress)
         self.exitButton.clicked.connect(self.window.hide)
 
@@ -105,6 +112,8 @@ class OutputData(object):
         item.setText(_translate("Dialog", "Уровень безработицы, %", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
         self.calculateButton.setText(_translate("Dialog", "Расчет", None))
+        self.plotButton.setText(_translate("Dialog", "График", None))
+
 
     def updateTableWidget(self, arr):
         odf = pandas.DataFrame(arr, columns=['nac', 'vvp_nominal_tenge', 'vvp_temp', 'bezrab', 'inf'])
@@ -122,6 +131,7 @@ class OutputData(object):
         vvp_temp = self.doDataModellingImitation(self.vvp_temp)
         bezrab = self.doDataModellingImitation(self.bezrab)
         inf = self.doDataModellingImitation(self.inf)
+        self.data = [nac, vvp_nominal_tenge, vvp_temp, bezrab, inf]
         arr = []
         for j in range(0,8):
           arr.append([])
@@ -139,3 +149,13 @@ class OutputData(object):
         G_coeffs = uniform(0.1, 0.5, len(data))
         data_new = [ normal(x, G * choice(G_coeffs)) for x in data ]
         return data_new
+
+    def handlePlotButtonPress(self):
+        selectedIndexes = self.tableWidget.selectedIndexes()
+        if (len(selectedIndexes) > 0):
+          column = selectedIndexes[0].column()
+          y = self.data[column]
+          x = range(self.START_YEAR, self.START_YEAR + len(y))
+          plt.xlabel('Year')
+          plt.plot(x,y)
+          plt.show()
