@@ -163,6 +163,8 @@ class BankInputData(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Банк начальные условия и коэффициенты", None))
         self.label.setText(_translate("Dialog", "Банк", None))
@@ -182,14 +184,3 @@ class BankInputData(object):
         self.saveButton.setText(_translate("Dialog", "Запись", None))
         self.cancelButton.setText(_translate("Dialog", "Отмена", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
-

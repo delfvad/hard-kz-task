@@ -178,6 +178,7 @@ class PopulationInputData(object):
         self.lineEdit_7.setText('0.13')
         self.lineEdit_8.setText('0.12')
 
+        self.exitButton.clicked.connect(self.window.hide)
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Население начальные условия", None))

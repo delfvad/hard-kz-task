@@ -69,6 +69,7 @@ if __name__ == "__main__":
     main_window.open_population_initial_conditions.triggered.connect(population_start_conditions.window.show)
     main_window.open_production_setup.triggered.connect(production_input_data.window.show)
     main_window.login.triggered.connect(login_window.window.show)
+    main_window.exit.triggered.connect(app.quit)
 
     sys.exit(app.exec_())
 

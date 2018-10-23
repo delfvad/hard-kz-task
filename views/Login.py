@@ -66,6 +66,7 @@ class Login(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
         self.login_button.clicked.connect(self.handleLoginButtonPress)
+        self.exit_button.clicked.connect(self.window.hide)
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Диспетчеризация", None))
@@ -77,8 +78,10 @@ class Login(object):
 
     def handleLoginButtonPress(self):
       print(self.LineEdit.text())
-      if (self.LineEdit.text() == 'mypass'):
+      if (self.LineEdit.text() == 'Gulnur'):
         self.label.setText(_translate("Dialog", "Пароль введен верно\nДоступ разрешен", None))
         self.setFieldsState(False)
       else:
         self.label.setText(_translate("Dialog", "Неверный пароль", None))
+
+        

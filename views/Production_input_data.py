@@ -212,6 +212,8 @@ class ProductionInputData(object):
         self.lineEdit_16.setText('0.90')
         self.lineEdit_17.setText('3.00')
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Производство начальные условия и коэффициенты", None))
         self.label.setText(_translate("Dialog", "Производство", None))

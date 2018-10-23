@@ -115,6 +115,8 @@ class PopulationStartConditions(object):
         self.lineEdit_6.setText('18200000')
         self.lineEdit_7.setText('19')
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Население начальные условия", None))
         self.label_8.setText(_translate("Dialog", "Население ( начальные условия )", None))

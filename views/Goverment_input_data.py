@@ -148,6 +148,8 @@ class GovermentInputData(object):
         self.lineEdit_11.setText('0.20')
         self.lineEdit_12.setText('0.11')
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Государство начальные условия", None))
         self.label.setText(_translate("Dialog", "Государство\n"
@@ -168,14 +170,3 @@ class GovermentInputData(object):
         self.cancelButton.setText(_translate("Dialog", "Отмена", None))
         self.calculateButton.setText(_translate("Dialog", "Расчет", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
-

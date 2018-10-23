@@ -215,6 +215,8 @@ class GovermentStartConditions1(object):
         self.LineEdit_3.setText('3087822')
         self.LineEdit_4.setText('8064750')
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Государство начальные условия и коэффициенты 1", None))
         self.label.setText(_translate("Dialog", "Государство ( начальные условия )", None))
@@ -241,14 +243,3 @@ class GovermentStartConditions1(object):
         self.saveButton.setText(_translate("Dialog", "Запись", None))
         self.cancelButton.setText(_translate("Dialog", "Отмена", None))
         self.exitButton.setText(_translate("Dialog", "Выход", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
-

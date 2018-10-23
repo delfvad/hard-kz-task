@@ -138,6 +138,8 @@ class GovermentStartConditions2(object):
         self.lineEdit_10.setText('63050000')
         self.lineEdit_11.setText('30485000')
 
+        self.exitButton.clicked.connect(self.window.hide)
+
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Государство начальные условия и коэффициенты 2", None))
         self.label.setText(_translate("Dialog", "Государство ( начальные условия )", None))
