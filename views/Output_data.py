@@ -2,12 +2,12 @@
 
 # Form implementation generated from reading ui file 'Output_data.ui'
 #
-# Created by: PyQt4 UI code generator 4.12.1
+# Created by: PyQt5 UI code generator 4.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
-from PyQt4.QtGui import QTableWidgetItem
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QTableWidgetItem
 import pandas
 from numpy.random import normal, uniform, choice
 import matplotlib.pyplot as plt
@@ -19,12 +19,12 @@ except AttributeError:
         return s
 
 try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QtWidgets.QApplication.UnicodeUTF8
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QtWidgets.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QtWidgets.QApplication.translate(context, text, disambig)
 
 class OutputData(object):
 
@@ -41,34 +41,34 @@ class OutputData(object):
         self.window = Dialog
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(900, 509)
-        self.verticalLayout_5 = QtGui.QVBoxLayout(Dialog)
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout_5.setObjectName(_fromUtf8("verticalLayout_5"))
-        self.tableWidget = QtGui.QTableWidget(Dialog)
+        self.tableWidget = QtWidgets.QTableWidget(Dialog)
         self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
         self.tableWidget.setColumnCount(5)
         self.tableWidget.setRowCount(0)
-        item = QtGui.QTableWidgetItem()
+        item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
-        item = QtGui.QTableWidgetItem()
+        item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(1, item)
-        item = QtGui.QTableWidgetItem()
+        item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
-        item = QtGui.QTableWidgetItem()
+        item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, item)
-        item = QtGui.QTableWidgetItem()
+        item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(4, item)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(170)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(30)
         self.verticalLayout_5.addWidget(self.tableWidget)
-        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
-        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
-        self.exitButton = QtGui.QPushButton(Dialog)
+        self.exitButton = QtWidgets.QPushButton(Dialog)
         self.exitButton.setObjectName(_fromUtf8("exitButton"))
-        self.calculateButton = QtGui.QPushButton(Dialog)
+        self.calculateButton = QtWidgets.QPushButton(Dialog)
         self.calculateButton.setObjectName(_fromUtf8("calculateButton"))
-        self.plotButton = QtGui.QPushButton(Dialog)
+        self.plotButton = QtWidgets.QPushButton(Dialog)
         self.plotButton.setObjectName(_fromUtf8("plotButton"))
         self.horizontalLayout_2.addWidget(self.plotButton)
         self.horizontalLayout_2.addWidget(self.calculateButton)

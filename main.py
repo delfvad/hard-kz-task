@@ -1,5 +1,6 @@
 
-from PyQt4 import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QApplication
 from views.Main_window import EMainWindow
 from views.Bank_input_data import BankInputData
 from views.Goverment_input_data import GovermentInputData
@@ -21,40 +22,40 @@ df = pandas.read_csv('intens.csv')
 
 if __name__ == "__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
 
     main_window = EMainWindow()
-    main_window.setupUi(QtGui.QMainWindow())
+    main_window.setupUi(QtWidgets.QMainWindow())
     main_window.window.show()
 
     bank_input_data = BankInputData()
-    bank_input_data.setupUi(QtGui.QDialog())
+    bank_input_data.setupUi(QtWidgets.QDialog())
 
     goverment_input_data = GovermentInputData()
-    goverment_input_data.setupUi(QtGui.QDialog())
+    goverment_input_data.setupUi(QtWidgets.QDialog())
 
     goverment_start_conditions_1 = GovermentStartConditions1()
-    goverment_start_conditions_1.setupUi(QtGui.QDialog())
+    goverment_start_conditions_1.setupUi(QtWidgets.QDialog())
 
     goverment_start_conditions_2 = GovermentStartConditions2()
-    goverment_start_conditions_2.setupUi(QtGui.QDialog())
+    goverment_start_conditions_2.setupUi(QtWidgets.QDialog())
 
     output_data = OutputData()
-    output_data.setupUi(QtGui.QDialog())
+    output_data.setupUi(QtWidgets.QDialog())
 
     population_input_data = PopulationInputData()
-    population_input_data.setupUi(QtGui.QDialog())
+    population_input_data.setupUi(QtWidgets.QDialog())
     population_input_data.handleTable(df)
 
     global population_start_conditions
     population_start_conditions = PopulationStartConditions()
-    population_start_conditions.setupUi(QtGui.QDialog())
+    population_start_conditions.setupUi(QtWidgets.QDialog())
 
     production_input_data = ProductionInputData()
-    production_input_data.setupUi(QtGui.QDialog())
+    production_input_data.setupUi(QtWidgets.QDialog())
 
     login_window = Login(setFieldsState)
-    login_window.setupUi(QtGui.QDialog())
+    login_window.setupUi(QtWidgets.QDialog())
 
     main_window.open_bank_coeffitients.triggered.connect(
         bank_input_data.window.show)
