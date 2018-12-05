@@ -1,4 +1,4 @@
-
+import os
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QApplication
 from views.Main_window import EMainWindow
@@ -15,9 +15,19 @@ import pandas
 from IPython import embed
 
 def setFieldsState(state):
-  pass
+    pass
 
-df = pandas.read_csv('intens.csv')
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+df = pandas.read_csv(resource_path('intens.csv'))
 
 
 if __name__ == "__main__":
