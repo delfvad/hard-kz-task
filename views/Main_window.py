@@ -102,7 +102,7 @@ class EMainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Исследование и управление детерминированными хаотическими процессами в развитии экономической системы", None))
         self.menu.setTitle(_translate("MainWindow", "Настройка", None))
         self.menu_2.setTitle(_translate("MainWindow", "Диспетчеризация", None))
         self.menu_3.setTitle(_translate("MainWindow", "Корректировка данных", None))

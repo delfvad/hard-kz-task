@@ -123,7 +123,7 @@ class OutputData(object):
             self.tableWidget.setItem(index, 1, QTableWidgetItem(str(round(row['vvp_nominal_tenge'],1))))
             self.tableWidget.setItem(index, 2, QTableWidgetItem(str(round(row['vvp_temp'],1))))
             self.tableWidget.setItem(index, 3, QTableWidgetItem(str(round(row['bezrab'],1))))
-            self.tableWidget.setItem(index, 4, QTableWidgetItem(str(round(row['inf'],1))))  
+            self.tableWidget.setItem(index, 4, QTableWidgetItem(str(round(row['inf'],1))))
 
     def handleCalculateButtonPress(self):
         nac = self.doDataModellingImitation(self.nac)
@@ -154,8 +154,11 @@ class OutputData(object):
         selectedIndexes = self.tableWidget.selectedIndexes()
         if (len(selectedIndexes) > 0):
           column = selectedIndexes[0].column()
+          header = self.tableWidget.horizontalHeaderItem(self.tableWidget.currentItem().column()).text();
           y = self.data[column]
           x = range(self.START_YEAR, self.START_YEAR + len(y))
-          plt.xlabel('Year')
+          plt.figure(num=header)
+          plt.xlabel('Год')
+          plt.ylabel(header)
           plt.plot(x,y)
           plt.show()
