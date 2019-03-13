@@ -2,6 +2,10 @@
 
 Build project with pyinstaller.
 
-To build run:
+Firstly install required packages by running:
+
+pip install -r requirements.txt
+
+To build application run:
 
 pyinstaller.py --onefile main.spec
