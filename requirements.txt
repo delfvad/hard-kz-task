@@ -2,3 +2,5 @@ numpy
 pandas
 ipython
 pyqt5
+pyinstaller
+matplotlib
