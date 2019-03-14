@@ -28,7 +28,7 @@ except AttributeError:
 
 class OutputData(object):
 
-    START_YEAR = 2012
+    START_YEAR = 2009
     def __init__(self):
         self.nac = [17338.2, 17586.1, 17731.3, 17591.5, 17918.3, 18165.7, 18221.8, 18374.4]
         self.vvp_nominal_tenge = [34.231, 39.521, 40.886, 44.354, 49.740, 51.836, 52.731, 54.442]
